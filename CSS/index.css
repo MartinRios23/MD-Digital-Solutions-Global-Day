@@ -1,0 +1,685 @@
+/*General*/
+@font-face {
+  font-family: "Sequal";
+  src: URL("./Fonts/Sequel100Black-95.ttf") format("truetype");
+}
+
+body,
+html {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  font-size: 16px;
+  position: relative;
+}
+
+html,
+div,
+li,
+span,
+a,
+body,
+p,
+table,
+input,
+select {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-family: "Montserrat", sans-serif !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.wrap{
+  margin: 0 auto;
+  width: 100%;
+}
+
+.clearfix{
+  float: none;
+  clear: both;
+}
+
+/*HEADER*/
+#header {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #0d46ac;
+
+}
+
+#header img{
+  width: 100%;
+  margin-left: 0;
+}
+
+#header .logo{
+  display: flex;
+  float: left;
+  width: 17%;
+  cursor: pointer;
+  padding: 2.3%;
+  margin-left: 2%;
+  
+}
+
+/*NAVBAR*/
+#menu{
+  width: fit-content;
+  display: flex;
+  float: right;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5%;
+  margin-top: 1.2%;
+  padding: .5%;
+}
+
+
+#header #btnMenu{
+  position: absolute;
+  display: none;
+  width: 2rem;
+  top: 0;
+  right: 0;
+  color: white;
+  cursor: pointer;
+  z-index: 3;
+}
+
+#menuEscondido{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color:#0d46ac;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  transition: all 2s;
+  transform: translateZ(-200%);
+}
+
+#menuEscondido a{
+  display: block;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  transition: all 0.2s;
+  margin: 15px;
+  margin-left: 10%;
+  font-size: 1.1em;
+}
+
+#menuEscondido.active{
+  height: 100vh;
+  transform: translateZ(0%);
+}
+
+#menu li {
+  font-size: 1rem;
+  display: inline-block;
+  margin-top: 1%;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+
+#menu li a {
+  display: block;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  transition: all 0.2s;
+}
+
+#menu li a:hover {
+  color: white;
+  text-shadow: 1px 0px 1px white;
+  transform: scale(1.2, 1.2);
+}
+
+#menu #watch{
+  width: 100%;
+  display: block;
+  text-align: center;
+  background-color: white;
+  color: #0d46ac;
+  padding: 7% 15%;
+  border-radius: 3px;
+  font-weight: 600;
+  
+}
+
+#menu #watch:hover{ 
+  transform: scale(1.1);
+  
+}
+
+/*CONTENIDO PRINCIPAL*/
+
+#contenedorPrincipal{ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 45vmax;
+  background-image: url("../Images/background/bg.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#contenedorPrincipal span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 43%;
+  margin: 0 auto;
+  margin-top: 10%;
+  margin-bottom: 3%;
+}
+
+#contenedorPrincipal img{
+  width: 100%;
+}
+
+#contenedorPrincipal a{
+  text-align: center;
+  text-decoration: none;
+  width: 13%;
+  padding: 1% 5%;
+  margin: 0.7%;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.3px;
+}
+
+#watchDown{
+  background-color: #0d46ac;
+  color: white;
+}
+
+#prayer{
+  border: 1px solid #0d46ac;
+  color: #0d46ac;
+}
+
+#prayer:hover{
+  box-shadow: 0px 3px 5px #0d46ac;
+}
+
+#watchDown:hover{
+  box-shadow: 0px 3px 5px #414141;
+}
+
+/*CONTENEDOR SECUNDARIO*/
+
+#contenedorSecundario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-image: url("../Images/background/bg-blue.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+  position:relative;
+}
+
+#contenedorSecundario span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  margin: 0 auto;
+  margin-top: 10%;
+  margin-bottom: 3%;
+}
+
+#contenedorSecundario img{
+  width: 100%;
+}
+
+#contenedorSecundario p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 0px;
+  width: 65%;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 100;
+  line-height: 1.7rem;
+}
+
+#contenedorSecundario h3{
+  text-align: center;
+  width: 63%;
+  color: white;
+  margin-bottom: 0;
+
+}
+
+#contenedorSecundario #textoBajo{
+  margin-top: 4%;
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+}
+
+.separador{
+  width: 65%;
+  border: 1px solid white;
+}
+
+.separador2{
+  width: 35%;
+  height: 0.3px;
+  border: 1px solid white
+}
+
+/*VIDEO*/
+
+#contenedorVideo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44%;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: -7%;
+  border-radius: 1px;
+}
+
+#contenedorVideo #preview{
+  width: 100%;
+}
+
+#contenedorVideo .play{
+  position: absolute;
+  width: 5%;
+  cursor: pointer;
+}
+
+#modal{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#modal.active{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#modal video{
+  width: 60%;
+}
+
+#modal .play{
+  top: 10%;
+  right: 10%;
+  position: absolute;
+  width: 2%;
+  cursor: pointer;
+}
+
+/*Speakers*/
+#contenedorSpeakers{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7%;
+  width: 100%;
+  height: 100%;
+}
+
+#contenedorSpeakers h2{
+  font-family: "DM Serif Text", serif;
+  color: #0d46ac;
+  font-size: 2.5rem;
+}
+
+#contenedorColumnas{
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+#contenedorColumnas ul{
+  margin-top: -3%;
+}
+
+#contenedorColumnas ul li{
+  display:flex;
+  list-style: none;
+  margin: 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  width: 100%
+}
+
+#contenedorColumnas ul li::before{
+  content: url("../Images/svg/check.svg");
+  margin-right: 2%;
+}
+
+#contenedorSpeakers #watchSpeakers{
+  margin-top: 2%;
+  background-color: #0d46ac;
+  padding: 0.6% 4%;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  box-shadow: 0px 2px 3px black;
+  transition: all 0.5s;
+}
+
+#contenedorSpeakers #watchSpeakers:hover{
+  transform: scale(1.1);
+}
+
+/*FOOTER*/
+#footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+  width: 100%;
+  background-color: #0d46ac;
+}
+
+#footer div{
+  padding: 1%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#footer img{
+  width: 4.3rem;
+}
+
+#footer p{
+  margin-top: 7%;
+  text-align: center;
+  color: white;
+  line-height: 1.5rem;
+}
+
+@media screen and (max-width: 600px){
+/*RESPONSIVE*/
+
+  
+  .wrap{  
+    margin: 0 auto;
+    width: 1250px;
+  }
+  /*HEADER*/
+
+  #header {
+    height: 15vmin;
+    position: relative;
+  }
+
+  
+  #header .logo{
+    width: 40%;
+    margin-top: 4%;
+    margin-left: 6%;
+    padding: 2%;
+    margin-bottom: 5%;
+  }
+
+  /*NAVBAR*/
+  #menu{
+    display: none;
+  }
+
+  #header #btnMenu{
+    display: flex;
+    position: absolute;
+    width: 7%;
+    top: 22%;
+    right: 7%;
+  }
+
+  /*CONTENIDO PRINCIPAL*/
+  #contenedorPrincipal{
+    height: 90vmin;
+  }
+
+  #contenedorPrincipal span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+    width: 80%;
+  }
+  #contenedorPrincipal a{
+    width: 70%;
+    margin: 3%;
+    padding: 2.5% 5%;
+  }
+
+  /*CONTENIDO SECUNDARIO*/
+  #contenedorSecundario{
+    height: auto;
+  }
+
+  #contenedorSecundario span{
+    margin-top: 20%;
+    margin-bottom: 6%;
+    width: 85%;
+  }
+
+  #contenedorSecundario p{
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  #contenedorSecundario h3{
+    font-size: 1rem;
+    width: 90%;
+  }
+
+  /*VIDEO*/
+  #contenedorVideo{
+    margin-top: 8%;
+    margin-bottom: -7%;
+    width: 80%;
+  }
+
+  #contenedorVideo .play{
+    width: 15%;
+  }
+
+  #modal video{
+    width: 80%;
+  }
+  
+  #modal .play{
+    top: 15%;
+    right: 10%;
+    width: 7%;
+  }
+
+  /*SPEAKERS*/
+  #contenedorSpeakers{
+    height: auto;
+  }
+
+  #contenedorColumnas{
+    width: 100%;
+    flex-direction: column;
+  }
+
+  #contenedorColumnas ul{
+    width: 100%;
+    padding: 0;
+    margin-left: 5%;
+  }
+
+  #contenedorColumnas ul li{
+    width: 90%;
+    margin: 10px;
+  }
+
+  #contenedorSpeakers #watchSpeakers{
+    text-align: center;
+    width: 75%;
+    padding: 3% 6%;
+  }
+
+  /*FOOTER*/
+  #footer div{
+    padding: 15%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 993px) {
+  .wrap{  
+    margin: 0 auto;
+    width: 1250px;
+  }
+  /*HEADER*/
+
+  #header {
+    height: 15vmax;
+    position: relative;
+  }
+  
+  #header .logo{
+    width: 40%;
+    margin-top: 5%;
+    margin-left: 6%;
+    padding: 2%;
+    margin-bottom: 5%;
+    
+  }
+
+  /*NAVBAR*/
+  #menu {
+    display: none;
+  }
+
+  #header #btnMenu{
+    display: flex;
+    position: absolute;
+    width: 7%;
+    top: 25%;
+    right: 7%;
+  }
+
+  /*CONTENIDO PRINCIPAL*/
+  #contenedorPrincipal{
+    height: 70vmax;
+  }
+
+  #contenedorPrincipal span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12%;
+    width: 80%;
+  }
+  #contenedorPrincipal a{
+    width: 70%;
+    margin: 2%;
+    padding: 2.5% 5%;
+  }
+
+  /*CONTENIDO SECUNDARIO*/
+  #contenedorSecundario{
+    height: auto;
+  }
+
+  #contenedorSecundario span{
+    margin-top: 15%;
+    margin-bottom: 6%;
+    width: 85%;
+  }
+
+  #contenedorSecundario p{
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  #contenedorSecundario h3{
+    font-size: 1rem;
+    width: 90%;
+  }
+
+  /*VIDEO*/
+  #contenedorVideo{
+    margin-top: 8%;
+    margin-bottom: -7%;
+    width: 80%;
+  }
+
+  #contenedorVideo .play{
+    width: 12%;
+  }
+
+  #modal video{
+    width: 80%;
+  }
+  
+  #modal .play{
+    top: 5%;
+    right: 5%;
+    width: 4%;
+  }
+
+  /*SPEAKERS*/
+  #contenedorSpeakers{
+    height: auto;
+  }
+
+  #contenedorColumnas{
+    width: 100%;
+    flex-direction: row;
+  }
+
+  #contenedorColumnas ul{
+    width: 100%;
+    padding: 0;
+    margin-left: 5%;
+  }
+
+  #contenedorColumnas ul li{
+    width: 90%;
+    margin: 10px;
+  }
+
+  #contenedorSpeakers #watchSpeakers{
+    text-align: center;
+    width: 50%;
+    padding: 3% 6%;
+  }
+
+  /*FOOTER*/
+  #footer div{
+    padding: 15%;
+  }
+}
